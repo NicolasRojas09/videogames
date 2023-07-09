@@ -1,0 +1,24 @@
+.divGeneral{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../../vistas/one-piece-thousand-sunny-wallpaper-2560x1024-8306_99.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.cardBienvenida{
+    border: solid 4px black;
+    border-radius: 20px;
+    padding: 2rem;
+    background-color: rgb(25, 25, 25);
+    color: rgb(160, 160, 160);
+    display: flex;
+    flex-direction: column;
+}
