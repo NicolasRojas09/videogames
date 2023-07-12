@@ -22,7 +22,14 @@ const getAllGames = async () => {
             name: game.name,
             image: game.background_image,
             releaseDate: game.released,
-            rating: game.rating
+            rating: game.rating,
+            genres: game.genres.map(genre => {
+                return {
+                    id: genre.id,
+                    name: genre.name,
+                    image: genre.image_background
+                }
+            })
         }
     })
 
@@ -56,8 +63,25 @@ const getGamesByName = async (name) => {
 
     const gamesApi = await axios.get(`https://api.rawg.io/api/games?key=${API_KEY}&search=${name}`)
     .then(response => response.data.results)
+
+    const atributosNecesariosApi = gamesApi?.map(game => {
+        return{
+            id: game.id,
+            name: game.name,
+            image: game.background_image,
+            releaseDate: game.released,
+            rating: game.rating,
+            genres: game.genres.map(genre => {
+                return {
+                    id: genre.id,
+                    name: genre.name,
+                    image: genre.image_background
+                }
+            })
+        }
+    })
     
-    const games = [...gamesDB, ...gamesApi]
+    const games = [...gamesDB, ...atributosNecesariosApi]
 
     if (games.length === 0){
         throw new Error('No existen juegos con ese nombre')
