@@ -7,7 +7,10 @@ const { Op } = require('sequelize')
 // OBTENER TODOS LOS JUEGOS
 
 const getAllGames = async () => {
-    const gamesDB =  await Videogame.findAll()
+    const gamesDB =  await Videogame.findAll({
+        where:{created: true},
+        include: [{ model: Genre }]
+    })
     const datos = [];
 
     for (let pagina = 1; pagina <= 5; pagina++) {
@@ -23,6 +26,7 @@ const getAllGames = async () => {
             image: game.background_image,
             releaseDate: game.released,
             rating: game.rating,
+            created: false,
             genres: game.genres.map(genre => {
                 return {
                     id: genre.id,
@@ -71,6 +75,7 @@ const getGamesByName = async (name) => {
             image: game.background_image,
             releaseDate: game.released,
             rating: game.rating,
+            created: false,
             genres: game.genres.map(genre => {
                 return {
                     id: genre.id,

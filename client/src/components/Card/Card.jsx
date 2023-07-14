@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom"
 import style from './Card.module.css'
 
-const Card = ({ id, name, image, genres}) => {
+const Card = ({ id, name, image, genres }) => {
     const navigate = useNavigate()
 
     return (
