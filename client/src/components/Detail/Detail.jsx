@@ -21,6 +21,7 @@ const Detail = () => {
     return(
         <div>
             <img src={game?.background_image} alt="" />
+            <p>{game?.plataforms}</p>
         </div>
     )
 }

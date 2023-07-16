@@ -9,7 +9,7 @@ const Navbar = () => {
 
     return(
         <div>
-            <button onClick={() => {dispatch(getGames());dispatch(pagesGames(1)) ; navigate('/home')}}>inicio</button>
+            <button onClick={() => {dispatch(getGames()); dispatch(pagesGames(1)); navigate('/home')}}>inicio</button>
             <SearchBar/>
         </div>
     )
