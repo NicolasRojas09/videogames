@@ -1,0 +1,24 @@
+.navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0.5rem 2rem 1rem 2rem;
+    background: rgb(31,6,48);
+    background: linear-gradient(180deg, rgb(15, 3, 23) 82%, rgba(40,8,62,1) 87%, rgba(77,49,96,1) 90%, rgba(135,71,177,1) 92%, rgba(255,255,255,1) 95%, rgba(135,71,177,1) 98%, rgba(77,49,96,1) 100%);
+}
+
+.logo{
+    width: 8rem;
+    transition: 220ms;
+    transform: scale(1.1);
+}
+.logo:hover{
+    transform: scale(1.05);
+}
+
+.searchCreate{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+}

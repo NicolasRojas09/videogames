@@ -1,17 +1,29 @@
 import { getGames, pagesGames } from "../../redux/actions"
 import { useDispatch } from "react-redux"
-import { useNavigate } from "react-router-dom"
+import { useLocation, useNavigate } from "react-router-dom"
 import SearchBar from "../Searchbar/Searchbar"
+import style from "./Navbar.module.css"
 
 const Navbar = () => {
     const dispatch = useDispatch()
     const navigate = useNavigate()
+    const location = useLocation()
+
+    const handleAction = () => {
+        if (location.pathname === '/home') {
+          window.location.reload();
+        } else {
+          navigate('/home');
+        }
+      };
 
     return(
-        <div>
-            <button onClick={() => {dispatch(getGames()); dispatch(pagesGames(1)); navigate('/home')}}>inicio</button>
-            <button onClick={() => {navigate('/form')}}>Create Game</button>
-            <SearchBar/>
+        <div className={style.navbar}>
+            <img className={style.logo} onClick={() => {dispatch(getGames()); dispatch(pagesGames(1)); handleAction()}} src={require('../../vistas/pngegg(1).png')} alt="logo" />
+            <div className={style.searchCreate}>
+                <button onClick={() => {navigate('/form')}}>Create Game</button>
+                <SearchBar/>
+            </div>
         </div>
     )
 }

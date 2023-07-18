@@ -1,4 +1,4 @@
-import { GET_GAMES, SEARCH_GAMES, ORDER, FILTER, PAGES } from "./action-types";
+import { GET_GAMES, SEARCH_GAMES, ORDER, FILTER, PAGES, OPCION } from "./action-types";
 import axios from 'axios'
 
 export const getGames = () => {
@@ -27,4 +27,8 @@ export const filterGames = (valor) => {
 
 export const pagesGames = (pag) => {
     return { type: PAGES, payload: pag }
+}
+
+export const opcionChange = (opcion) => {
+    return { type: OPCION, payload: opcion }
 }

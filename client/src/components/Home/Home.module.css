@@ -1,5 +1,39 @@
 .contenedor{
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.labels{
+    margin-left: 1rem;
+    margin-right: 4px;
+    color: rgb(115, 55, 172);
+}
+
+.selects{
+    margin: 1rem;
+    margin-left: 0rem;
+    text-align: center;
+    color: rgb(167, 132, 199);
+    background-color: rgb(47, 13, 80);
+    border: solid 2px rgb(107, 26, 158);
+    border-radius: 15px;
+    appearance: none;
+    width: 8rem;
+}
+.selects::-webkit-scrollbar {
+    width: 8px; /* Ancho de la barra de desplazamiento */
+}
+.selects::-webkit-scrollbar-thumb {
+    background-color: #240c36; /* Color del pulgar de la barra de desplazamiento */
+} 
+.selects::-webkit-scrollbar-track {
+    background-color: rgb(81, 15, 122); /* Color de la pista de la barra de desplazamiento */
+}
+
+.contenedorCards{
+    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;

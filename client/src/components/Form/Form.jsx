@@ -87,7 +87,8 @@ const Form = ({ login }) => {
                     rating: '',
                     genres: [],
                 })
-            }).then(dispatch(getGames()))
+                dispatch(getGames())
+            })
             .then(navigate('/home'))
         }
     }

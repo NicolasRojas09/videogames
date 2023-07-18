@@ -11,8 +11,6 @@ const Detail = () => {
             console.log(data);
             if (data.name) {
                 setGame(data);
-            } else {
-                window.alert('No hay juegos con ese ID');
             }
         });
         return setGame({});

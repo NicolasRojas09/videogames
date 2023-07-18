@@ -1,4 +1,4 @@
-import { GET_GAMES, SEARCH_GAMES, ORDER, FILTER, PAGES } from "./action-types"
+import { GET_GAMES, SEARCH_GAMES, ORDER, FILTER, PAGES, OPCION } from "./action-types"
 
 
 const initialState = {
@@ -7,6 +7,7 @@ const initialState = {
     originalOrder: [],
     currentPage: 1,
     totalJuegos: 0,
+    opcion: '',
 }
 
 const reducer = (state = initialState, action) => {
@@ -31,14 +32,14 @@ const reducer = (state = initialState, action) => {
             
         case ORDER:
             const gamesCopy = [...state.games]
-            console.log(gamesCopy);
-            return {
-                ...state,
-                games: action.payload === 'AA' ? gamesCopy.sort((a,b) => a.name.localeCompare(b.name))
+            const gamesOrdened = action.payload === 'AA' ? gamesCopy.sort((a,b) => a.name.localeCompare(b.name))
                 : action.payload === 'AD' ? gamesCopy.sort((a,b) => b.name.localeCompare(a.name))
                 : action.payload === 'RA' ? gamesCopy.sort((a,b) => a.rating - b.rating)
                 : action.payload === 'RD' ? gamesCopy.sort((a,b) => b.rating - a.rating)
                 : [...state.originalOrder]
+            return {
+                ...state,
+                games: gamesOrdened
             }
 
         case FILTER:
@@ -66,6 +67,12 @@ const reducer = (state = initialState, action) => {
             return {
                 ...state,
                 currentPage: action.payload
+            }
+
+        case OPCION:
+            return {
+                ...state,
+                opcion: action.payload
             }
 
         default:
