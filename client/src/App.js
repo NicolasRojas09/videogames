@@ -10,7 +10,7 @@ function App() {
   return (
     <div>
       {
-            location.pathname !== '/' && <Navbar/>
+            location.pathname !== '/' && location.pathname !== '/form' && <Navbar/>
       }
       <Routes>
         <Route path='/' element={<Landing/>}/>

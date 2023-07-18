@@ -46,7 +46,25 @@ const getGamesById = async (id, idType) => {
     const game =
         idType === "api" 
         ? await axios.get(`https://api.rawg.io/api/games/${id}?key=${API_KEY}`)
-                .then(response => response.data)
+                .then(response => {
+                    const gameRenomProps = {
+                        id: response.data.id,
+                        name: response.data.name,
+                        image: response.data.background_image,
+                        description: response.data.description_raw,
+                        plataforms: response.data.platforms?.map(platform => platform.platform.name).join(', '),
+                        releaseDate: response.data.released,
+                        rating: response.data.rating,
+                        genres: response.data.genres?.map(genre => {
+                            return {
+                                id: genre.id,
+                                name: genre.name,
+                                image: genre.image_background
+                            }
+                        })
+                    }
+                    return gameRenomProps
+                })
         : await Videogame.findByPk(id, {
             include: [{ model: Genre }] // Incluir la relación con el modelo Genre
           })

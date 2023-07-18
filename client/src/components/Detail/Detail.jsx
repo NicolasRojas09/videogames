@@ -20,8 +20,21 @@ const Detail = () => {
 
     return(
         <div>
-            <img src={game?.background_image} alt="" />
-            <p>{game?.plataforms}</p>
+            <img src={game.image} alt="" />
+            <div>
+                <h2>{game.name}</h2>
+                <h3>{game.rating}⭐</h3>
+            </div>
+            <div>
+                {game.genres?.map(genre => {
+                    return( 
+                        <h5>{genre.name}</h5>
+                    )
+                })}
+            </div>
+            <p>{game.description}</p>
+            <h4>{game.plataforms}</h4>
+            <h5>releaseDate: {game.releaseDate}</h5>
         </div>
     )
 }
