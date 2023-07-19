@@ -13,8 +13,9 @@ const Landing = () => {
     return (
         <div className={style.divGeneral}>
             <div className={style.cardBienvenida}>
-                <h1>sdfsdf</h1>
-                <button onClick={() => navigate('/home')}>Bienvenido</button>
+                <h1 className={style.h1Landing}>GAME VISA</h1>
+                <img className={style.joystick} src={require('../../vistas/joystick.png')} alt="joystick" />
+                <button className={style.travel} onClick={() => navigate('/home')}>Travel</button>
             </div>
         </div>
     )

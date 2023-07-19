@@ -1,4 +1,4 @@
-import { GET_GAMES, SEARCH_GAMES, ORDER, FILTER, PAGES, OPCION } from "./action-types"
+import { GET_GAMES, SEARCH_GAMES, ORDER, FILTER, PAGES, OPCION, LOADING } from "./action-types"
 
 
 const initialState = {
@@ -8,6 +8,7 @@ const initialState = {
     currentPage: 1,
     totalJuegos: 0,
     opcion: '',
+    loading: true,
 }
 
 const reducer = (state = initialState, action) => {
@@ -73,6 +74,12 @@ const reducer = (state = initialState, action) => {
             return {
                 ...state,
                 opcion: action.payload
+            }
+
+        case LOADING:
+            return {
+                ...state,
+                loading: action.payload
             }
 
         default:

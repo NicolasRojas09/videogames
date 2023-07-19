@@ -1,0 +1,34 @@
+.contenedorPages{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    color: #872195;
+    border-bottom: #661b8cee solid 2px;
+    width: 20rem;
+}
+.contenedorPages h2{
+    filter: drop-shadow(0 0 5px #4a1873) drop-shadow(0 0 20px #581e7a) contrast(2) brightness(2);
+}
+
+.btnPages {
+    background-color: #00000000;
+    color: #76258d;
+    border: 2px solid #6c2291;
+    border-radius:15px;
+    padding: 4px 8px;
+    font-size: 12px;
+    font-family: tahoma;
+    letter-spacing:3px;
+    cursor: pointer;
+    font-weight: bold;
+    filter: drop-shadow(0 0 5px #4a1873) drop-shadow(0 0 20px #581e7a) contrast(1.5) brightness(1.5);
+    transition: .5s;
+}
+  
+.btnPages:hover {
+    color: rgb(31,6,48);
+    background-color: #5f2685;
+    filter: drop-shadow(0 0 15px #6f2492) contrast(2) brightness(2);
+}

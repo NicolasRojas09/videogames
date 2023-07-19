@@ -11,7 +11,7 @@ const Card = ({ id, name, image, genres }) => {
             <div className={style.genresContainer}>
                 {genres?.map(genre => {
                     return( 
-                        <h5 className={style.genres}>{genre.name}</h5>
+                        <h5 key={genre.id} className={style.genres}>{genre.name}</h5>
                     )
                 })}
             </div>

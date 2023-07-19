@@ -23,6 +23,7 @@
 .name{
     padding-left: 4%;
     padding-right: 4%;
+    color: #bea3d1;
 }
 
 .image{
@@ -43,8 +44,8 @@
 }
 
 .genres{
-    color: rgb(164, 164, 164);
-    border: solid 1px rgb(142, 142, 142);
+    color: rgb(194, 166, 207);
+    border: solid 1px rgb(191, 164, 210);
     border-radius: 6px;
     margin: 2px;
     padding: 2px;

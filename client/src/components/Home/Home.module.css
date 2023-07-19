@@ -1,3 +1,14 @@
+.contenedorCompleto{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 24rem;
+}
+.contenedorLoading{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 .contenedor{
     display: flex;
     flex-direction: column;
@@ -8,14 +19,14 @@
 .labels{
     margin-left: 1rem;
     margin-right: 4px;
-    color: rgb(115, 55, 172);
+    color: rgb(157, 92, 218);
 }
 
 .selects{
     margin: 1rem;
     margin-left: 0rem;
     text-align: center;
-    color: rgb(167, 132, 199);
+    color: rgb(179, 127, 228);
     background-color: rgb(47, 13, 80);
     border: solid 2px rgb(107, 26, 158);
     border-radius: 15px;
@@ -40,4 +51,35 @@
     gap: 2rem;
     margin: 1rem;
     margin-top: 2rem;
+}
+
+.loadingSpiner {
+    object-position: center;
+    width: 5rem;
+    height: 100%;
+  }
+.loadingSpiner:after {
+    content: " ";
+    display: block;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border-radius: 50%;
+    border: 6px solid #fff;
+    border-color: #6d1289 transparent #6d1289 transparent;
+    filter: drop-shadow(0 0 5px #4a1873) drop-shadow(0 0 20px #581e7a) contrast(2) brightness(2);
+    animation: loadingSpiner 1.2s linear infinite;
+}
+@keyframes loadingSpiner {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+}
+
+.loadingH1{
+    color: #6d1289;
+    filter: drop-shadow(0 0 5px #4a1873) drop-shadow(0 0 20px #581e7a) contrast(2) brightness(2);
 }

@@ -1,0 +1,43 @@
+.boton {
+    background-color: #00000000;
+    color: #76258d;
+    border: 2px solid #6c2291;
+    border-top-right-radius:15px;
+    border-bottom-right-radius: 15px;
+    padding: 6px 12px;
+    font-size: 15px;
+    font-family: tahoma;
+    letter-spacing:5px;
+    cursor: pointer;
+    font-weight: bold;
+    filter: drop-shadow(0 0 5px #4a1873) drop-shadow(0 0 20px #581e7a) contrast(2) brightness(2);
+    transition: .5s;
+}
+  
+.boton:hover {
+    color: rgb(31,6,48);
+    background-color: #5f2685;
+    filter: drop-shadow(0 0 15px #6f2492) contrast(2) brightness(2);
+}
+
+.searchInput {
+    background-color: #00000000;
+    color: #76258d;
+    border: 2px solid #6c2291;
+    border-top-left-radius:15px;
+    border-bottom-left-radius: 15px;
+    padding: 6px 12px;
+    font-size: 15px;
+    font-family: tahoma;
+    letter-spacing:5px;
+    cursor: pointer;
+    font-weight: bold;
+    filter: drop-shadow(0 0 5px #4a1873) drop-shadow(0 0 20px #581e7a) contrast(2) brightness(2);
+    transition: .5s;
+}
+  
+.searchInput:hover {
+    color: rgb(31,6,48);
+    background-color: #5f2685;
+    filter: drop-shadow(0 0 15px #6f2492) contrast(2) brightness(2);
+}

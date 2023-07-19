@@ -7,18 +7,53 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url('../../vistas/one-piece-thousand-sunny-wallpaper-2560x1024-8306_99.jpg');
+    background-image: url('../../vistas/wall.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
 }
 
 .cardBienvenida{
-    border: solid 4px black;
+    border: solid 4px rgb(79, 20, 113);
     border-radius: 20px;
-    padding: 2rem;
-    background-color: rgb(25, 25, 25);
-    color: rgb(160, 160, 160);
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.247);
+    filter: drop-shadow(0 0 5px #4a1873) drop-shadow(0 0 20px #581e7a) contrast(2) brightness(2);
+    color: rgb(96, 45, 171);
     display: flex;
     flex-direction: column;
+    align-items: center;
+    width: 22rem;
+    height: 18rem;
+}
+
+.joystick{
+    width: 8rem;
+    filter: drop-shadow(0 0 5px #4a1873) drop-shadow(0 0 20px #581e7a) contrast(1) brightness(1);
+}
+
+.h1Landing{
+    filter: drop-shadow(0 0 5px #4a1873) drop-shadow(0 0 20px #581e7a) contrast(1) brightness(1);
+}
+
+.travel {
+    margin-top: 1rem;
+    background-color: #00000000;
+    color: #76258d;
+    border: 2px solid #6c2291;
+    border-radius:15px;
+    padding: 6px 12px;
+    font-size: 15px;
+    font-family: tahoma;
+    letter-spacing:5px;
+    cursor: pointer;
+    font-weight: bold;
+    filter: drop-shadow(0 0 5px #4a1873) drop-shadow(0 0 20px #581e7a) contrast(1) brightness(1);
+    transition: .5s;
+}
+  
+.travel:hover {
+    color: rgb(31,6,48);
+    background-color: #5f2685;
+    filter: drop-shadow(0 0 15px #6f2492) contrast(1) brightness(1);
 }

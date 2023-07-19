@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useParams } from "react-router-dom";   
 import { useState, useEffect } from "react";
+import style from "./Detail.module.css"
 
 const Detail = () => {
     const { id } = useParams();
@@ -17,22 +18,25 @@ const Detail = () => {
      }, [id]);
 
     return(
-        <div>
-            <img src={game.image} alt="" />
-            <div>
-                <h2>{game.name}</h2>
+        <div className={style.contenedor}>
+            <img className={style.imagenGame} src={game.image} alt="" />
+            <h2 className={style.gameName}>{game.name}</h2>
+            <div className={style.nameGen}>
+                <div className={style.generos}>
+                    {game.genres?.map(genre => {
+                        return( 
+                            <h5 className={style.cadaGenero}>{genre.name}</h5>
+                        )
+                    })}
+                </div>
                 <h3>{game.rating}⭐</h3>
             </div>
-            <div>
-                {game.genres?.map(genre => {
-                    return( 
-                        <h5>{genre.name}</h5>
-                    )
-                })}
+            <div className={style.contenedorDescr}>
+                <h3>Description</h3>
+                <p>{game.description}</p>
             </div>
-            <p>{game.description}</p>
             <h4>{game.plataforms}</h4>
-            <h5>releaseDate: {game.releaseDate}</h5>
+            <h4>ReleaseDate: {game.releaseDate}</h4>
         </div>
     )
 }

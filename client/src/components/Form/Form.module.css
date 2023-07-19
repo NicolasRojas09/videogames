@@ -1,0 +1,125 @@
+.contenedor{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: rgb(189, 156, 220);
+    font-size: small;
+    margin: 1rem;
+}
+.contenedorForm{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    border: 4px solid rgb(120, 28, 156);
+    border-radius: 20px;
+    background-color: #180b24c8;
+}
+
+.cerrarBtn{
+    background-color: #180b242d;
+    color: #76258d;
+    border: 2px solid #6c2291;
+    border-radius:15px;
+    padding: 6px 12px;
+    margin: 1rem;
+    width: 80%;
+    font-size: 15px;
+    font-family: tahoma;
+    letter-spacing:3px;
+    cursor: pointer;
+    font-weight: bold;
+    filter: drop-shadow(0 0 5px #4a1873) drop-shadow(0 0 20px #581e7a) contrast(2) brightness(2);
+    transition: .5s;
+}
+  
+.cerrarBtn:hover {
+    color: rgb(31,6,48);
+    background-color: #5f2685;
+    filter: drop-shadow(0 0 15px #6f2492) contrast(2) brightness(2);
+}
+
+.sectores input {
+    background-color: #00000000;
+    color: #76258d;
+    border: 2px solid #6c2291;
+    border-radius:15px;
+    padding: 6px 12px;
+    font-size: 15px;
+    font-family: tahoma;
+    letter-spacing:5px;
+    cursor: pointer;
+    font-weight: bold;
+    filter: drop-shadow(0 0 5px #4a1873) drop-shadow(0 0 20px #581e7a) contrast(2) brightness(2);
+}
+
+.sectores label, .sectoresPlataf label, .h5Form{
+    font-size: 15px;
+    font-family: tahoma;
+    color: #701b88;
+    filter: drop-shadow(0 0 5px #4a1873) drop-shadow(0 0 20px #581e7a) contrast(2) brightness(2);
+    padding-right: 4px;
+}
+
+.sectores textarea{
+    width: 14rem;
+    resize: none;
+    background-color: #00000000;
+    color: #76258d;
+    border: 2px solid #6c2291;
+    border-radius:15px;
+    padding: 6px 12px;
+    font-size: 15px;
+    font-family: tahoma;
+    letter-spacing:5px;
+    cursor: pointer;
+    font-weight: bold;
+    filter: drop-shadow(0 0 5px #4a1873) drop-shadow(0 0 20px #581e7a) contrast(2) brightness(2);
+    transition: .5s;
+}
+
+.sectores{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    padding: 2rem;
+    border-bottom: 2px solid rgb(126, 43, 181);
+}
+
+.sectoresPlataf{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40%;
+    padding: 2rem;
+    padding-top: 0rem;
+    border-bottom: 2px solid rgb(126, 43, 181);
+}
+.sectoresPlataf input{
+    margin-right: 1rem;
+}
+
+.contenedorForm button {
+    background-color: #00000000;
+    color: #76258d;
+    border: 2px solid #6c2291;
+    border-radius:15px;
+    padding: 6px 12px;
+    margin: 1rem;
+    font-size: 15px;
+    font-family: tahoma;
+    letter-spacing:3px;
+    cursor: pointer;
+    font-weight: bold;
+    filter: drop-shadow(0 0 5px #4a1873) drop-shadow(0 0 20px #581e7a) contrast(2) brightness(2);
+    transition: .5s;
+}
+  
+.contenedorForm button:hover {
+    color: rgb(31,6,48);
+    background-color: #5f2685;
+    filter: drop-shadow(0 0 15px #6f2492) contrast(2) brightness(2);
+}
